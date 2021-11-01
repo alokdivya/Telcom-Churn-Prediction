@@ -9,8 +9,6 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask("__name__")
-app.listen(process.env.PORT || 3000);
-
 df_1=pd.read_csv("first_telc.csv")
 
 q = ""
@@ -130,4 +128,4 @@ def predict():
                            query18 = request.form['query18'], 
                            query19 = request.form['query19'])
     
-app.run()
+app.run(debug=True)
