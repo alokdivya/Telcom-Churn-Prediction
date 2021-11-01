@@ -1,1 +1,1 @@
-web: gunicorn <telcom-churn-prediction>.wsgi --log-file -
+web: gunicorn app:app
